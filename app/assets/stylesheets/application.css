@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+/* Set font and text colors */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Style for the header */
+.tasks-header {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Style for each task item */
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Style for the task checkbox */
+.completed-checkbox {
+  margin-right: 10px;
+}
+
+/* Style for the task title */
+.task-title {
+  flex-grow: 1;
+  font-size: 1.2em;
+}
+
+/* Style for the delete icon */
+.fa-trash-can {
+  color: red;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+/* Style for the "Add new task" link */
+.add-task-link {
+  margin-top: 20px;
+}
+
+/* Style for the plus icon */
+.fa-plus {
+  font-size: 1.2em;
+  margin-right: 5px;
+}

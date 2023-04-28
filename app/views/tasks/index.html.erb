@@ -1,0 +1,24 @@
+<div class='container mt-5'>
+  <h1 class= 'tasks-header'>My Tasks</h1>
+  <div id='task-item'>
+  <% @tasks.each do |task| %>
+    <div class='task-item'>
+      <%= form_for(task, url: task_path(task), method: :patch) do |f| %>
+        <%= f.check_box :completed, class: 'completed-checkbox', checked: task.completed? %>
+        <span class='task-title'>
+          <%= link_to task.title, task_path(task) %>
+          </span>
+          <%= link_to delete_task_path(task), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
+          <i class='fa-solid fa-trash-can'></i>
+        <% end %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class='add-task-link'>
+    <%= link_to new_task_path do %>
+      <i class='fas fa-plus'></i> Add new task
+    <% end %>
+  </div>
+</div>
